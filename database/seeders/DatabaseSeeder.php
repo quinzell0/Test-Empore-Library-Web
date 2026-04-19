@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'BK001',
                 'title' => 'Laravel untuk Pemula',
                 'publish_year' => 2024,
-                'author' => 'Tim Empora',
+                'author' => 'Tim Empore',
                 'stock' => 5,
                 'created_at' => now(),
                 'updated_at' => now(),
