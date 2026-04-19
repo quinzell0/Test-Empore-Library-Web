@@ -18,6 +18,12 @@ Area anggota difokuskan pada satu tujuan utama: memilih buku yang tersedia dan m
         <div class="metric-value">{{ $submissionCount }}</div>
         <p class="metric-copy">Total pengajuan peminjaman yang pernah kamu kirim melalui sistem.</p>
     </article>
+    <article class="metric-card requests">
+        <i class="metric-icon fas fa-book"></i>
+        <div class="metric-label">Active Loans</div>
+        <div class="metric-value">{{ $activeLoanCount }}</div>
+        <p class="metric-copy">Jumlah buku yang saat ini sedang kamu pinjam dan belum dikembalikan.</p>
+    </article>
 </div>
 
 <div class="surface-panel editorial-panel reveal-up reveal-delay-2">
@@ -30,6 +36,7 @@ Area anggota difokuskan pada satu tujuan utama: memilih buku yang tersedia dan m
         <strong>Langkah Berikutnya</strong>
         <div class="quick-actions">
             <a href="{{ route('member.loan-requests.create') }}" class="btn btn-success">Ajukan Peminjaman</a>
+            <a href="{{ route('member.loans.index') }}" class="btn btn-secondary">Lihat Peminjaman</a>
         </div>
     </div>
 </div>

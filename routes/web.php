@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\Auth\MemberAuthController;
 use App\Http\Controllers\Member\DashboardController as MemberDashboardController;
+use App\Http\Controllers\Member\LoanController as MemberLoanController;
 use App\Http\Controllers\Member\LoanRequestController as MemberLoanRequestController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,10 @@ Route::prefix('admin')->name('admin.')->group(function (): void {
 
         Route::get('/loan-requests/data', [AdminLoanRequestController::class, 'data'])->name('loan-requests.data');
         Route::get('/loan-requests', [AdminLoanRequestController::class, 'index'])->name('loan-requests.index');
+        Route::patch('/loan-requests/{loan}/status', [AdminLoanRequestController::class, 'updateStatus'])->name('loan-requests.update-status');
+        Route::get('/loans/data', [AdminLoanRequestController::class, 'loansData'])->name('loans.data');
+        Route::get('/loans', [AdminLoanRequestController::class, 'loans'])->name('loans.index');
+        Route::patch('/loans/{loan}/returned', [AdminLoanRequestController::class, 'markReturned'])->name('loans.return');
     });
 });
 
@@ -44,6 +49,7 @@ Route::prefix('member')->name('member.')->group(function (): void {
     Route::middleware('auth:member')->group(function (): void {
         Route::post('/logout', [MemberAuthController::class, 'destroy'])->name('logout');
         Route::get('/dashboard', MemberDashboardController::class)->name('dashboard');
+        Route::get('/loans', [MemberLoanController::class, 'index'])->name('loans.index');
         Route::get('/loan-requests/create', [MemberLoanRequestController::class, 'create'])->name('loan-requests.create');
         Route::post('/loan-requests', [MemberLoanRequestController::class, 'store'])->name('loan-requests.store');
     });

@@ -17,6 +17,7 @@ class DashboardController extends Controller
         return view('member.dashboard', [
             'availableBookCount' => Book::where('stock', '>', 0)->count(),
             'submissionCount' => BookLoan::where('member_id', $member->id)->count(),
+            'activeLoanCount' => BookLoan::where('member_id', $member->id)->where('status', 'approved')->count(),
         ]);
     }
 }

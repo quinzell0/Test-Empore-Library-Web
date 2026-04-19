@@ -38,6 +38,7 @@ Ringkasan operasional untuk memantau katalog, anggota, dan pengajuan peminjaman 
             <a href="{{ route('admin.books.create') }}" class="btn btn-primary">Tambah Buku</a>
             <a href="{{ route('admin.members.create') }}" class="btn btn-secondary">Tambah Anggota</a>
             <a href="{{ route('admin.loan-requests.index') }}" class="btn btn-success">Lihat Pengajuan</a>
+            <a href="{{ route('admin.loans.index') }}" class="btn btn-outline-primary">Lihat Peminjaman</a>
         </div>
     </div>
 </div>

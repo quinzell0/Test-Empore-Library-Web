@@ -1367,6 +1367,12 @@
                                 <p>Pengajuan Buku</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.loans.index') }}" class="nav-link {{ request()->routeIs('admin.loans.*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-exchange-alt"></i>
+                                <p>Peminjaman Buku</p>
+                            </a>
+                        </li>
                     @else
                         <li class="nav-item">
                             <a href="{{ route('member.dashboard') }}" class="nav-link {{ request()->routeIs('member.dashboard') ? 'active' : '' }}">
@@ -1378,6 +1384,12 @@
                             <a href="{{ route('member.loan-requests.create') }}" class="nav-link {{ request()->routeIs('member.loan-requests.*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-paper-plane"></i>
                                 <p>Ajukan Peminjaman</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('member.loans.index') }}" class="nav-link {{ request()->routeIs('member.loans.*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-book-reader"></i>
+                                <p>List Peminjaman</p>
                             </a>
                         </li>
                     @endif
