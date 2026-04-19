@@ -602,7 +602,7 @@
             <div class="poster-brand">
                 <span class="poster-symbol"><i class="fas fa-book-open"></i></span>
                 <div>
-                    <small>Empora Library</small>
+                    <small>Empore Library</small>
                     <strong>Archive</strong>
                 </div>
             </div>

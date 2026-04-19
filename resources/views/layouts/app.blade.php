@@ -1334,7 +1334,7 @@
         <a href="{{ auth('admin')->check() ? route('admin.dashboard') : route('member.dashboard') }}" class="brand-link">
             <span class="brand-symbol"><i class="fas fa-book-open"></i></span>
             <span class="brand-copy">
-                <small>Empora Library</small>
+                <small>Empore Library</small>
                 <span class="brand-text">Archive</span>
             </span>
         </a>
